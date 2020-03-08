@@ -1,4 +1,4 @@
-# code_quiz
+# Code Quiz
 Timed code quiz with multiple-choice questions
 
 ## User Story
