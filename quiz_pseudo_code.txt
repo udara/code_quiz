@@ -1,0 +1,25 @@
+1) start_quiz
+2) display_question / start_timer
+3) check answer
+	if answer correct
+	   add_to_score
+	    (is_quiz_finished || is_alocated_time_over)
+	      if true
+                get_user_details{
+					get user details
+					is_user_highest_score
+				}
+				display_highscores
+
+	      if not finished
+                display_question
+        else (if answer is wrong)
+	   time_penelty
+	   is_alocated_time_over
+	    if yes
+		get_user_details
+	     
+		
+	
+	
+					
