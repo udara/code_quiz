@@ -1,16 +1,51 @@
-.choice{
-    background-color: brown;
+body{
+    background: #666;
+}
+header
+{
+    background-color: #173f5f;
+    color: #fff;
+}
+.list{
+    background-color: #20639B;
     padding:5px;
     margin:5px auto;
     color:#fff;
     font-size: 1em;
+    cursor: pointer;
+    list-style-type: none;
+    list-style-position:inside;
+    margin-left:0;
+    max-width: 300px;
 }
-.start_ui
-{
 
+.list:hover{
+    background-color: #173F5F;
+}
+
+.list:active {
+    background-color: #ED553B;
+}
+
+#multiple_questions
+{
+    margin-left:0;
+    padding-left:0
+}
+
+#show_result{
+    border-top:#ED553B 1px solid ;
+    width: 100%;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+#top_link_view_high_score
+{
+    cursor: pointer;
 }
 
 #quiz_game_ui, #get_user_details_ui, #display_high_scores_ui
 {
-    display: none;
+    display:none;
 }

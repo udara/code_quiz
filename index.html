@@ -10,54 +10,58 @@
     <link rel="stylesheet" href="css/style.css"> 
 </head>
   <body>
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-06">
-                    
+    <div class="container p-0 mt-5 bg-light">
+        <header>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 pt-2 pb-2" id="top_link_view_high_score">View High Scores</div>
+                        <div class="col-sm-6 pt-2 pb-2 text-right" id="count_down"></div> 
+                    </div>
                 </div>
-                <div class="col-sm-06" id="count_down">
+        </header>
+        <main>
+            <div class="container">
+                <div class="row">
                     
+                    <div class="col-sm-12 p-5" id="start_ui">
+                        <h1>Coding Quiz Challenge</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, architecto provident sit eius repellendus<br>
+                        animi itaque omnis dolorem, illum placeat magnam, similique nobis nostrum officia<br> accusantium aspernatur? Distinctio, similique ipsam.</p>
+                        <button id="btn_start" class="">Start Quiz</button>
+                    </div>
+
+                    <div class="col-sm-12 p-5"  id="quiz_game_ui">
+                        <div>
+                            <h2 class="lead mb-4" id="question"></h2>
+                            <ul id="multiple_questions">
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="get_user_details_ui" class="col-sm-12 p-5">
+                        <h1>All Done!</h1>
+                        <p id='display_user_score'></p>
+                        <label>Enter Initials
+                            <input type="text" id="user_initials" value="">
+                        </label>
+                        <button id="btn_get_user_details">Submit</button>
+                    </div>
+
+                    <div class="col-sm-12 p-5" id="display_high_scores_ui" >
+                        <h1>Display High Scores</h1>
+                        <p id="top_five_high_scores"></p>
+                        <button id="btn_go_back">Go Back</button> <button id="btn_clear_high_scores">Clear High Scores</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <main>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12" id="start_ui">
-                <h1>Coding Quiz Challenge</h1>
-                <button id="btn_start">Start Quiz</button>
+            <div class="container">
+                <div class="row col-sm-12 pr-5 pl-5 pt-0 mt-0">
+                    <p id="show_result" class="mt-0 pt-0"></p>
+                </div>
             </div>
-            <div class="col-sm-12" id="quiz_game_ui">
-                <h2 class="lead" id="question">To prevent any method from overriding, we declare the method as</h2>
-                <ul class="w-25">
-                    <li class="choice">static</li>
-                    <li class="choice">const</li>
-                    <li class="choice">final</li> 
-                    <li class="choice">abstract</li>
-                </ul>
-                <p class="">Correct</p>
-            </div>
-            <div class="col-sm-12" id="get_user_details_ui">
-                <h1>Get User Details</h1>
-                <label>
-                    <input type="text" id="user_name" value="">
-                </label>
-                    <button id="btn_get_user_details"></button>
-                
-            </div>
-            <div class="col-sm-12" id="display_high_scores_ui">
-                <h1>Display Hight Scores</h1>
-            </div>
-        </div>
+        </main>
     </div>
-    </main>
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
