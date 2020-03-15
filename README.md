@@ -1,6 +1,12 @@
 # Code Quiz
 Timed code quiz with multiple-choice questions
 
+https://udara.github.io/code_quiz/
+
+![](https://github.com/udara/code_quiz/blob/master/img/index_lg_ss.jpg)
+
+![](https://github.com/udara/code_quiz/blob/master/img/index_sm_ss.jpg)
+
 ## User Story
 
 ```
