@@ -1,3 +1,4 @@
+// Program variables
 const oneSecond = 1000;
 const gametime = 60000;
 var allocatedTimeForQuiz = gametime;
@@ -47,6 +48,13 @@ var quetions_array = [
     }
 ];
 
+// check if element high_scores exist in the local storage
+// if false define empty high_scores array
+// if true - read high_scores element
+// push the new score to high_scores array 
+// sort high_scores array in ascending order
+// slice high_score_array to get the first 5 high scores
+// Save high_score_array to local 
 function save_score_to_local_storage(initials,score)
 {
     if (localStorage.getItem('high_scores')){
@@ -86,14 +94,21 @@ function display_high_scores_stored_in_local_storage()
     top_five_high_scores.innerHTML = high_score_list;
 }
 
+// Stop Gametimer. Hide quiz_game_ui
+// Display get_user_details_ui
 function getUserDetails()
 {
     clearInterval(gameTimer);
     count_down.innerHTML = '0';
+    user_initials.value="";
     quiz_game_ui.style.display = "none";
     get_user_details_ui.style.display = "block"; 
     display_user_score.innerHTML = 'Your score is '+score; 
 }
+
+// If answer is true addtoscore, display "Correct" on #display_results div.
+    // If the quetions_array has no more questions move to get user details stage else display next question
+// If answer is false apply time penelty and display "Incorrect" on #display_results div.
 
 function processAnswer(answer)
 {
@@ -113,6 +128,7 @@ function processAnswer(answer)
     }
 }
 
+// Display QUestion and answers
 function displayQuestion(question_number)
 {
     let question = document.querySelector('#question');
@@ -124,33 +140,43 @@ function displayQuestion(question_number)
      }
 }
 
+
+// Check if the the answer is correct returns boolean
 function isAnswerCorrect(question_number,user_answer){
     return quetions_array[question_number].answer === user_answer;
 }
 
+//Check if quetions_arra has more elemnts to display. Returns bollean
 function isQuestionsOver(){
    return  current_question >= quetions_array.length - 1;
 }
 
+// Add 1 to total score returns score
 function scorePoints(){
     return ++score;
 }
 
+// Deduct the time penelty from allocatedTimeForQuiz.
 function applyTimePenelty(){
     const timePenelty = oneSecond * 5;
     return allocatedTimeForQuiz = allocatedTimeForQuiz - timePenelty; 
 }
 
+// Check if the time allocated for quiz is over
 function Timeleft(){
     return allocatedTimeForQuiz = (allocatedTimeForQuiz - oneSecond);
 }
 
+// Start a time interval. Check Allocated time for quiz is over.
+// If false - Update time lefet on #count_down div
+// If true goto get user details stage 
 function countDown(){
     gameTimer = setInterval(function(){   
         allocatedTimeForQuiz <= 0 ? getUserDetails() : count_down.innerHTML=Timeleft()/1000;
     },oneSecond);
 }
 
+// Display Correct or Incorrect on #show_result div for 1 second
 function showResult(result)
 {
     show_result.innerHTML = result;
@@ -159,12 +185,16 @@ function showResult(result)
     },oneSecond);
 }
 
+// set Program variables to defailt values
 function resetGame()
 {
     score = 0;
     current_question = 0;
     allocatedTimeForQuiz = gametime;
 }
+
+
+// Event Listeners Below
 
 btn_start.addEventListener("click", function(){
     start_ui.style.display = "none";
