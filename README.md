@@ -1,31 +1,33 @@
 # Code Quiz
+
+![Badge](https://img.shields.io/badge/License-GNU-brightgreen)
+
 Timed code quiz with multiple-choice questions
+   
+### Table of Contents
+1. Installation
+2. Usage
+3. License
+4. Contributing
+5. Tests
+6. Questions
+       
+### Installation 
+```npm install```
+      
+### Usage
+```node index```
 
-https://udara.github.io/code_quiz/
+### License
+GNU
 
-![](https://github.com/udara/code_quiz/blob/master/img/index_lg_ss.jpg)
+### Contributing
+Udara Ranasinghe
 
-![](https://github.com/udara/code_quiz/blob/master/img/index_sm_ss.jpg)
+### Tests
+```npm test```
 
-## User Story
-
-```
-AS A coding bootcamp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
-
-## Acceptance Criteria
-
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
+### Questions
+![Profile Picture](https://avatars0.githubusercontent.com/u/1111731?v=4)
+Github Username: udara
+Github email: indi79@hotmail.com
